@@ -1,0 +1,33 @@
+{
+  "name": "age-calculator",
+  "version": "0.0.1",
+  "description": "Calculate age based on passed date",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winfinit/age-calculator.js.git"
+  },
+  "keywords": [
+    "age",
+    "age calculator",
+    "age-calculator",
+    "calculate age",
+    "find age"
+  ],
+  "author": "Roman Jurkov <winfinit@gmail.com>",
+  "license": "The MIT License (MIT)",
+  "bugs": {
+    "url": "https://github.com/winfinit/age-calculator.js/issues"
+  },
+  "dependencies": {
+    
+  },
+  "homepage": "https://github.com/winfinit/age-calculator.js",
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "chai": "^1.9.1"
+  }
+}
