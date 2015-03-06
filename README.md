@@ -19,9 +19,9 @@ small helper library that provides one an ability to get an age of a person
   console.log(ageCalculator.getAge('01-08-1987'));
   // output: 28
   console.log(ageCalculator.getAgeDate(age));
-  // output: 
+  // output: Sat Mar 05 2005 14:18:02 GMT-0500 (EST)
   console.log(ageCalculator.getAgeDate('01-08-1987'));
-  // output: 
+  // output: Sat Mar 05 2005 14:18:02 GMT-0500 (EST)
 
 ```
 
@@ -38,6 +38,7 @@ If you find a bug or willing to add some enhancement, pull requests are very wel
 ## Release History
 
 * 0.0.1 Initial release
+* 0.0.2 Changed structure of a module
 
 ## Legal
 
