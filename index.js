@@ -6,14 +6,15 @@
         }
         var ageDifMs = Date.now() - birthday.getTime();
         var ageDate = new Date(ageDifMs); // miliseconds from epoch
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
+        var age = ageDate.getUTCFullYear() - 1970;
+        return (age > 0) ? age : 0;
     };
     var getAgeDate = function(birthday) {
         if (! (birthday instanceof Date) ) {
     	birthday = new Date(birthday);
         }
         var ageDifMs = Date.now() - birthday.getTime();
-        var ageDate = new Date(ageDifMs); 
+        var ageDate = new Date(ageDifMs);
         return ageDate;
     };
 
