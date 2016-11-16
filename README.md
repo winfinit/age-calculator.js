@@ -13,6 +13,7 @@ small helper library that provides one an ability to get an age of a person
 ```javascript
   var ageCalculator = require('age-calculator');
 
+  // Be careful: Javascript months start at 0 (so zero stands for january)
   var age = new Date(1987, 0, 8);
   console.log(ageCalculator.getAge(age));
   // output: 28
