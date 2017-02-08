@@ -1,31 +1,20 @@
-var should = require('chai').should(),
- 	expect = require('chai').expect,
-    ageCalculator = require('../index');
+var should = require('chai').should();
 
-    var today = new Date();
-    var age = new Date(today.getFullYear() - 35,0,1);
-    var ageString = (age.getMonth() + 1) + "-" + age.getDate() + "-" + age.getFullYear();
+let {AgeFromDateString, AgeFromDate} = require('../built/age-calculator');
 
+describe('validate AgeFromDate', function() {
 
-describe('getAge', function() {
-    it('via date object should return age', function(){
-	var date = ageCalculator.getAge(age);
-    	expect(date).to.equal(35);
-    });
-    it('via string should return age', function(){
-	var date = ageCalculator.getAge(ageString);
-    	expect(date).to.equal(35);
+    it('returns correct age', function() {
+        let age = new AgeFromDate(new Date(1987, 0, 8)).age;
+        age.should.be.a('number');
     });
 });
 
-describe('getAgeDate', function() {
-    it('via string should return date object', function(){
-	var date = ageCalculator.getAgeDate(ageString);
-    	expect(date).to.be.an.instanceof(Date);
-    });
+describe('validate AgeFromDateString', function() {
 
-    it('via Date object should return date object', function(){
-	var date = ageCalculator.getAgeDate(age);
-    	expect(date).to.be.an.instanceof(Date);
+    it('returns correct age', function() {
+        let age = new AgeFromDateString('1987-01-08').age;
+        age.should.be.a('number');
     });
 });
+

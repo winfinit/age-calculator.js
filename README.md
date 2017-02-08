@@ -1,6 +1,6 @@
 # age-calculator.js
 
-small helper library that provides one an ability to get an age of a person
+small helper library that provides one an ability to calculate age of a person
 
 ## Installation
 
@@ -12,17 +12,17 @@ small helper library that provides one an ability to get an age of a person
 
 ```javascript
   var ageCalculator = require('age-calculator');
+  let {AgeFromDateString, AgeFromDate} = require('age-calculator');
 
   // Be careful: Javascript months start at 0 (so zero stands for january)
-  var age = new Date(1987, 0, 8);
-  console.log(ageCalculator.getAge(age));
-  // output: 28
-  console.log(ageCalculator.getAge('01-08-1987'));
-  // output: 28
-  console.log(ageCalculator.getAgeDate(age));
-  // output: Sat Mar 05 2005 14:18:02 GMT-0500 (EST)
-  console.log(ageCalculator.getAgeDate('01-08-1987'));
-  // output: Sat Mar 05 2005 14:18:02 GMT-0500 (EST)
+
+  let ageFromDate = new AgeFromDate(new Date(1987, 0, 8)).age;
+  console.log("value from AgeFromDate", ageFromDate);
+  // output: 30 (at the time of this doc)
+
+  let ageFromString = new AgeFromDateString('1987-01-08').age;
+  console.log("value from ageFromString", ageFromString);
+  // output: 30 (at the time of this doc)
 
 ```
 
@@ -40,6 +40,7 @@ If you find a bug or willing to add some enhancement, pull requests are very wel
 
 * 0.0.1 Initial release
 * 0.0.2 Changed structure of a module
+* 1.0.0 TypeScript rewrite
 
 ## Legal
 
