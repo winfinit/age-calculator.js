@@ -12,7 +12,7 @@ small helper library that provides one an ability to calculate age of a person
 
 ```javascript
   var ageCalculator = require('age-calculator');
-  let {AgeFromDateString, AgeFromDate} = require('age-calculator');
+  let {AgeFromDateString, AgeFromDate, AgeAtDate, AgeAtDateString} = require('age-calculator');
 
   // Be careful: Javascript months start at 0 (so zero stands for january)
 
@@ -23,6 +23,14 @@ small helper library that provides one an ability to calculate age of a person
   let ageFromString = new AgeFromDateString('1987-01-08').age;
   console.log("value from ageFromString", ageFromString);
   // output: 30 (at the time of this doc)
+  
+  let ageAtDate = new AgeFromDate(new Date(1987, 0, 8), new Date(1988, 0, 8)).age;
+  console.log("value from ageAtDate", ageAtDate);
+  // output: 1 (always)
+
+  let ageAtString = new AgeAtDateString('1987-01-08', '1988-01-08').age;
+  console.log("value from ageFromString", ageAtString);
+  // output: 1 (always)
 
 ```
 
